@@ -1,46 +1,77 @@
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/menu-style.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
-    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- HTML5 shim for IE backwards compatibility -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script src="js/bootstrap.min.js"></script>
-    <title>Sign In</title>
-  </head>
-  <body style="zoom: 1;" cz-shortcut-listen="true">
+    <style type="text/css">
+body {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #f5f5f5;
+}
+.form-signin {
+	padding: 19px 29px 29px;
+	margin: 0 auto 20px;
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.form-signin .form-signin-heading,  .form-signin .checkbox {
+	margin-bottom: 10px;
+}
+.form-signin input[type="text"],  .form-signin input[type="password"] {
+	font-size: 16px;
+	height: auto;
+	margin-bottom: 15px;
+	padding: 7px 9px;
+}
+.container{
+	width:1024px;
+}
+</style>
+    <title>SIgn In</title>
+    </head>
 
-    <div class="container">
-      <div class="row">
+    <body style="zoom: 1;" cz-shortcut-listen="true">
+         <div class="container"> <div class="row">
 
-        <div class="span8">
-          <div class="sign-in">
-            <h2 class="form-signin-heading">Sign in</h2>
-            <div class="inner-left">
-              <form class="form-signin">
-                <label for="">Email Address</label>
-                <input type="text" class="input-block-level" placeholder="Email address">
-                <label for="">Password</label>
-                <input type="password" class="input-block-level" placeholder="Password">
-                <label class="checkbox">
-                  <input type="checkbox" value="remember-me"> Remember me
-                </label>
-                <button class="btn btn-large btn-primary" type="submit">Sign in</button>
-              </form>
-              <div class="pass-recovery">
-                » Forgot Password?<br>
-                » Don't have an account? Apply as a <a href="#">mentee</a> or <a href="#">mentor</a>.
-              </div>
-            </div>
-            <div class="inner-right">
-              <a href="#fb-signin" class="btn">Login with Linked-In</a>
-            </div>
-          </div>
+        <div class="span5">
+          <form class="form-signin">
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <input type="text" class="input-block-level" placeholder="Email address">
+            <input type="password" class="input-block-level" placeholder="Password">
+            <label class="checkbox">
+              <input type="checkbox" value="remember-me">
+              Remember me <small class="pull-right"><a href="#">Forgot your password?</a></small> <br /></label>
+              
+            <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+            <button class="btn btn-large btn-info pull-right">Login with LinkedIn!</button>
+          </form>
         </div>
-
+        <div class="span1" />
+        <div class="span4">
+          <form class="form-signin form-register">
+            <h2 class="form-signin-heading">Register... It's free!</h2>
+            <input type="text" class="input-block-level" placeholder="Email address">
+            <input type="password" class="input-block-level" placeholder="Password">
+<input type="password" class="input-block-level" placeholder="Confirm Password">
+            <button class="btn btn-large btn-primary" type="submit">Submit</button>
+          </form>
+        </div>
       </div>
-    </div> <!-- /container -->
-
-  </body>
-<html>
+    </div>
+</html>

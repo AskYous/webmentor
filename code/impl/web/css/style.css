@@ -24,3 +24,7 @@ li#icon{
 li#icon a{
 	padding: 0 10px;
 }
+
+#banner img{
+	border-radius: 10px 0 0 10px;
+}

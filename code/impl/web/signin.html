@@ -53,26 +53,35 @@
     <div class="container">
 <div class="row">
   <div class="span6">
-      <form class="form-signin">
+      <form class="form-signin" action="login.php" method="post">
         <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="text" class="input-block-level" placeholder="Email address">
-        <input type="password" class="input-block-level" placeholder="Password">
+        <input type="text" class="input-block-level" placeholder="Email address" name="email">
+        <input type="password" class="input-block-level" placeholder="Password" name="password">
         <label class="checkbox">
           <input type="checkbox" value="remember-me"> Remember me <small class="pull-right"><a href="#">Forgot your password?</a></small>
         </label>
-        <a href="dashboard.html" class="btn btn-large btn-primary" type="submit">Sign in</a>
+        <input class="btn btn-large btn-primary" type="submit" />
         <a href="#" class="btn btn-large btn-info pull-right">Login with LinkedIn!</a>
       </form>
 </div><div class="span1" />
 
 <div class="span5">
-      <form class="form-signin form-register">
+      <form class="form-signin form-register" action="insert.php" method="post">
         <h2 class="form-signin-heading">Register... It's Free!</h2>
-        <input type="text" class="input-block-level" placeholder="Email address">
-        <input type="password" class="input-block-level" placeholder="Password">
-        <input type="password" class="input-block-level" placeholder="Confirm Password">
-       
-        <button class="btn btn-large btn-primary" type="submit">Submit</button>
+        <input type="text" class="input-block-level" placeholder="Email address" name="email">
+        <input type="text" class="input-medium" placeholder="First" name="firstname">
+        <input type="text" class="input-large pull-right" placeholder="Last" name="lastname">
+        <input type="password" class="input-block-level" placeholder="Password" name="password">
+        <input type="password" class="input-block-level" placeholder="Confirm Password" name="confirmpassword">
+        <input type="text" class="input-block-level" placeholder="Birthday (YYYY-MM-DD)" name="birthday">
+        <select name="subject">
+          <option>- Choose Subject -</option>
+          <option>Physics</option>
+          <option>Math</option>
+          <option>Computer Science</option>
+        </select>
+        <div class="clear" />
+        <input class="btn btn-large btn-primary" type="submit"><!-- confirmpassword must equal password! Then enable the button-->
 
       </form>
 </div></div>

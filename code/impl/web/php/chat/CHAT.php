@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 class CHAT {
 
 	private static $instance;

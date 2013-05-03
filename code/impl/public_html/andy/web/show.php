@@ -1,4 +1,3 @@
-<?php include 'db.php' ?>
 <?php
 $username = "yousef";
 $password = 'se1U$aemp4&AtIcHR!lx';
@@ -16,18 +15,14 @@ mysql_select_db($database) or die("Can not select the database: ".mysql_error())
 
 $id = $_GET['id'];
 
-if(!isset($id) || empty($id) || !is_int($id)){
-     die("Please select your image!");
-}else{
 
-$query = mysql_query("SELECT * FROM profileimages WHERE id='".$id."'");
+$query = mysql_query("SELECT * FROM picture where id = 2");
 $row = mysql_fetch_array($query);
 $content = $row['image'];
 
 header('Content-type: image/jpg');
      echo $content;
 
-}
 
 
 

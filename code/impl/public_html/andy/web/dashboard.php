@@ -1,3 +1,58 @@
+
+<?php include 'db.php' ?>
+<?php
+$username = "yousef";
+$password = 'se1U$aemp4&AtIcHR!lx';
+$host = "localhost";
+$database = "webmentordb";
+
+// Make the connect to MySQL or die
+// and display an error.
+$link = mysql_connect($host, $username, $password);
+if (!$link) {
+die('Could not connect: ' . mysql_error());
+}
+
+// Select your database
+mysql_select_db ($database);
+// Make sure the user actually
+// selected and uploaded a file
+if (isset($_FILES['image']) && $_FILES['image']['size'] > 0) {
+
+// Temporary file name stored on the server
+$tmpName = $_FILES['image']['tmp_name'];
+
+// Read the file
+$fp = fopen($tmpName, 'r');
+$data = fread($fp, filesize($tmpName));
+$data = addslashes($data);
+
+
+
+// Create the query and insert
+// into our database.
+$query = "INSERT INTO picture ( image ) VALUES ('$data')";
+$results = mysql_query($query, $link);
+
+// Print results
+print "Thank you, your file has been uploaded.";
+
+}
+else {
+print "No image selected/uploaded";
+}
+
+// Close our MySQL Link
+mysql_close($link);
+
+
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
@@ -79,7 +134,7 @@
                </div>
             </div>
          </div>
-<form enctype="multipart/form-data" action="insertimage.php" method="post" name="changer">
+<form enctype="multipart/form-data" action="dashboard.php" method="post" name="changer">
 <input name="MAX_FILE_SIZE" value="102400" type="hidden">
  <input name="image" accept="image/jpeg" type="file">
 <input value="Submit" type="submit" name = "submit" id = "submit"> </form>

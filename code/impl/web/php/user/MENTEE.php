@@ -1,10 +1,17 @@
+<!--
+
+	* A MENTEE is created in $_SESSION['this_mentee'] after successful login 
+		if the user is a mentee
+
+ -->
+
+
 <? include_once 'USER.php' ?>
 
 <?php
 
 class MENTEE extends USER {
 	
-	protected static $instance;
 	private static $mentee_id;
 	
 	function __construct($email) {
@@ -15,12 +22,6 @@ class MENTEE extends USER {
 		}
 		else
 			echo 'user is not mentee';// $_SESSION['db']->register_mentor($email);
-	}
-	
-	public static function get_instance($email) {
-		if(!isset(self::$instance))
-			self::$instance = new MENTEE($email);
-		return self::$instance;
 	}
 	
 	public static function get_mentors_as_array() {

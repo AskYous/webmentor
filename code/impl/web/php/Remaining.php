@@ -122,6 +122,7 @@ echo 'good idea';
 	}
 /****************/
 //- Mentee Basic can have 1 mentor per subject ME-01-01
+//- Mentee Premium can have 10 mentors per subject ME-01-03
 
 
  set $_SESSION['wanted_mentor_id']
@@ -161,8 +162,15 @@ echo 'good idea';
 
 if($_POST['mentor_search_result_list']) {
 	$search_result_list = $_POST['mentor_search_result_list'];
-	for(int $i=0; $i<$_SESSION['MENTOR_SEARCH_RESULT_MAX']; $i++) {
+	for(int $i=0; $i<$_SESSION['MENTOR_SEARCH_RESULT_MAX']; $i++) {									
+									/* 	TODO:
+										set $_SESSION['MENTOR_SEARCH_RESULT_MAX'] 
+											in login.php based on $_SESSION['premium']
+									*/	
+			
 		echo 'Mentor '.$i.': '.$search_result_list[$i];
+	}
+}
 
 /****************/
 //- Mentee Premium can have 10 mentors per subject ME-01-03
